@@ -403,7 +403,6 @@
 			<MainAttribute>true</MainAttribute>
 			<Save>
 				<Field>1/0:51120a0f-da07-4104-bb4f-77e59538c4ec</Field>
-				<Field>Объект.Дата</Field>
 				<Field>Объект.Коэффициент</Field>
 				<Field>Объект.Период</Field>
 				<Field>Объект.Склад</Field>
