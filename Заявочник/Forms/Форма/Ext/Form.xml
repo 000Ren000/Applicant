@@ -258,6 +258,12 @@
 					<ContextMenu name="ТоварыНоменклатураКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="ТоварыНоменклатураРасширеннаяПодсказка" id="27"/>
 				</InputField>
+				<InputField name="ТоварыОстаток" id="28">
+					<DataPath>Объект.Товары.Остаток</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТоварыОстатокКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ТоварыОстатокРасширеннаяПодсказка" id="30"/>
+				</InputField>
 				<InputField name="ТоварыЕдИзм" id="111">
 					<DataPath>Объект.Товары.ЕдИзм</DataPath>
 					<EditMode>EnterOnInput</EditMode>
@@ -265,18 +271,29 @@
 					<ContextMenu name="ТоварыЕдИзмКонтекстноеМеню" id="112"/>
 					<ExtendedTooltip name="ТоварыЕдИзмРасширеннаяПодсказка" id="113"/>
 				</InputField>
-				<InputField name="ТоварыОстаток" id="28">
-					<DataPath>Объект.Товары.Остаток</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТоварыОстатокКонтекстноеМеню" id="29"/>
-					<ExtendedTooltip name="ТоварыОстатокРасширеннаяПодсказка" id="30"/>
-				</InputField>
-				<InputField name="ТоварыСреднее" id="31">
-					<DataPath>Объект.Товары.Период</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТоварыСреднееКонтекстноеМеню" id="32"/>
-					<ExtendedTooltip name="ТоварыСреднееРасширеннаяПодсказка" id="33"/>
-				</InputField>
+				<ColumnGroup name="ТоварыГруппа5" id="122">
+					<ExtendedTooltip name="ТоварыГруппа5РасширеннаяПодсказка" id="123"/>
+					<ChildItems>
+						<InputField name="ТоварыСреднее" id="31">
+							<DataPath>Объект.Товары.Период</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТоварыСреднееКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="ТоварыСреднееРасширеннаяПодсказка" id="33"/>
+						</InputField>
+						<InputField name="ТоварыСписаниеЗаПериод" id="119">
+							<DataPath>Объект.Товары.СписаниеЗаПериод</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Списание</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТоварыСписаниеЗаПериодКонтекстноеМеню" id="120"/>
+							<ExtendedTooltip name="ТоварыСписаниеЗаПериодРасширеннаяПодсказка" id="121"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
 				<InputField name="ТоварыКЗаказу" id="34">
 					<DataPath>Объект.Товары.КЗаказу</DataPath>
 					<EditMode>EnterOnInput</EditMode>
@@ -389,6 +406,56 @@
 							<Hiperlink>true</Hiperlink>
 							<ContextMenu name="ТоварыСпис4КонтекстноеМеню" id="90"/>
 							<ExtendedTooltip name="ТоварыСпис4РасширеннаяПодсказка" id="91"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ТоварыГруппа6" id="124">
+					<ExtendedTooltip name="ТоварыГруппа6РасширеннаяПодсказка" id="125"/>
+					<ChildItems>
+						<LabelField name="ТоварыРасх5" id="128">
+							<DataPath>Объект.Товары.Расх5</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CellHyperlink>true</CellHyperlink>
+							<ContextMenu name="ТоварыРасх5КонтекстноеМеню" id="129"/>
+							<ExtendedTooltip name="ТоварыРасх5РасширеннаяПодсказка" id="130"/>
+						</LabelField>
+						<LabelField name="ТоварыСпис5" id="131">
+							<DataPath>Объект.Товары.Спис5</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content> </v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<CellHyperlink>true</CellHyperlink>
+							<ContextMenu name="ТоварыСпис5КонтекстноеМеню" id="132"/>
+							<ExtendedTooltip name="ТоварыСпис5РасширеннаяПодсказка" id="133"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ТоварыГруппа7" id="126">
+					<ExtendedTooltip name="ТоварыГруппа7РасширеннаяПодсказка" id="127"/>
+					<ChildItems>
+						<LabelField name="ТоварыРасх6" id="137">
+							<DataPath>Объект.Товары.Расх6</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<CellHyperlink>true</CellHyperlink>
+							<ContextMenu name="ТоварыРасх6КонтекстноеМеню" id="138"/>
+							<ExtendedTooltip name="ТоварыРасх6РасширеннаяПодсказка" id="139"/>
+						</LabelField>
+						<LabelField name="ТоварыСпис6" id="134">
+							<DataPath>Объект.Товары.Спис6</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content> </v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<CellHyperlink>true</CellHyperlink>
+							<ContextMenu name="ТоварыСпис6КонтекстноеМеню" id="135"/>
+							<ExtendedTooltip name="ТоварыСпис6РасширеннаяПодсказка" id="136"/>
 						</LabelField>
 					</ChildItems>
 				</ColumnGroup>
@@ -529,6 +596,12 @@
 					<dcsset:item>
 						<dcsset:field>ТоварыПр4</dcsset:field>
 					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТоварыРасх5</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТоварыРасх6</dcsset:field>
+					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
 					<dcsset:item xsi:type="dcsset:FilterItemComparison">
@@ -594,6 +667,18 @@
 					</dcsset:item>
 					<dcsset:item>
 						<dcsset:field>ТоварыПр4</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТоварыРасх5</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТоварыРасх6</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТоварыСпис5</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ТоварыСпис6</dcsset:field>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
@@ -661,6 +746,48 @@
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>Шрифт</dcscor:parameter>
 						<dcscor:value xsi:type="v8ui:Font" ref="style:TextFont" height="12" kind="StyleItem"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТоварыСписаниеЗаПериод</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field"/>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#A41FAE</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" height="11" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТоварыКЗаказу</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field"/>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#E7FFE7</dcscor:value>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
