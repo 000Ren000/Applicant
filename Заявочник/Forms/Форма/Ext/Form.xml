@@ -258,18 +258,18 @@
 					<ContextMenu name="ТоварыНоменклатураКонтекстноеМеню" id="26"/>
 					<ExtendedTooltip name="ТоварыНоменклатураРасширеннаяПодсказка" id="27"/>
 				</InputField>
-				<InputField name="ТоварыОстаток" id="28">
-					<DataPath>Объект.Товары.Остаток</DataPath>
-					<EditMode>EnterOnInput</EditMode>
-					<ContextMenu name="ТоварыОстатокКонтекстноеМеню" id="29"/>
-					<ExtendedTooltip name="ТоварыОстатокРасширеннаяПодсказка" id="30"/>
-				</InputField>
 				<InputField name="ТоварыЕдИзм" id="111">
 					<DataPath>Объект.Товары.ЕдИзм</DataPath>
 					<EditMode>EnterOnInput</EditMode>
 					<Width>7</Width>
 					<ContextMenu name="ТоварыЕдИзмКонтекстноеМеню" id="112"/>
 					<ExtendedTooltip name="ТоварыЕдИзмРасширеннаяПодсказка" id="113"/>
+				</InputField>
+				<InputField name="ТоварыОстаток" id="28">
+					<DataPath>Объект.Товары.Остаток</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТоварыОстатокКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="ТоварыОстатокРасширеннаяПодсказка" id="30"/>
 				</InputField>
 				<ColumnGroup name="ТоварыГруппа5" id="122">
 					<ExtendedTooltip name="ТоварыГруппа5РасширеннаяПодсказка" id="123"/>
