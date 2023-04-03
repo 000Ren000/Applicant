@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<VerticalAlign>Bottom</VerticalAlign>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 	</AutoCommandBar>
@@ -21,42 +22,15 @@
 					<v8:content>Шапка</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Group>Vertical</Group>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<HorizontalAlign>Left</HorizontalAlign>
+			<VerticalAlign>Top</VerticalAlign>
 			<Behavior>Usual</Behavior>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ШапкаРасширеннаяПодсказка" id="2"/>
 			<ChildItems>
-				<UsualGroup name="Периоды" id="92">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Периоды</v8:content>
-						</v8:item>
-					</Title>
-					<ToolTip>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Периоды</v8:content>
-						</v8:item>
-					</ToolTip>
-					<Behavior>Usual</Behavior>
-					<Representation>None</Representation>
-					<ShowTitle>false</ShowTitle>
-					<ExtendedTooltip name="ПериодыРасширеннаяПодсказка" id="93"/>
-					<ChildItems>
-						<InputField name="Дата" id="3">
-							<DataPath>Объект.Дата</DataPath>
-							<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
-							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="5"/>
-						</InputField>
-						<InputField name="Период" id="94">
-							<DataPath>Объект.Период</DataPath>
-							<ContextMenu name="ПериодКонтекстноеМеню" id="95"/>
-							<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="96"/>
-						</InputField>
-					</ChildItems>
-				</UsualGroup>
 				<UsualGroup name="ШапкаЛев" id="104">
 					<Title>
 						<v8:item>
@@ -76,11 +50,80 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ШапкаЛевРасширеннаяПодсказка" id="105"/>
 					<ChildItems>
+						<UsualGroup name="Периоды" id="92">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Периоды</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Периоды</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ПериодыРасширеннаяПодсказка" id="93"/>
+							<ChildItems>
+								<InputField name="Дата" id="3">
+									<DataPath>Объект.Дата</DataPath>
+									<ContextMenu name="ДатаКонтекстноеМеню" id="4"/>
+									<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="5"/>
+								</InputField>
+								<InputField name="Период" id="94">
+									<DataPath>Объект.Период</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>21</MaxWidth>
+									<ContextMenu name="ПериодКонтекстноеМеню" id="95"/>
+									<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="96"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
 						<InputField name="Поставщик" id="108">
 							<DataPath>Поставщик</DataPath>
 							<ContextMenu name="ПоставщикКонтекстноеМеню" id="109"/>
 							<ExtendedTooltip name="ПоставщикРасширеннаяПодсказка" id="110"/>
 						</InputField>
+						<InputField name="Коэффициент" id="97">
+							<DataPath>Объект.Коэффициент</DataPath>
+							<SpinButton>true</SpinButton>
+							<ContextMenu name="КоэффициентКонтекстноеМеню" id="98"/>
+							<ExtendedTooltip name="КоэффициентРасширеннаяПодсказка" id="99"/>
+							<Events>
+								<Event name="Tuning">КоэффициентРегулирование</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ШапкаПрав" id="153">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка прав</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка прав</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>50</Width>
+					<HorizontalStretch>true</HorizontalStretch>
+					<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+					<GroupVerticalAlign>Top</GroupVerticalAlign>
+					<Group>Vertical</Group>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ШапкаПравРасширеннаяПодсказка" id="154"/>
+					<ChildItems>
 						<InputField name="Склад" id="69">
 							<DataPath>Объект.Склад</DataPath>
 							<ContextMenu name="СкладКонтекстноеМеню" id="70"/>
@@ -92,15 +135,11 @@
 							<ContextMenu name="ГруппаНоменклатурыКонтекстноеМеню" id="54"/>
 							<ExtendedTooltip name="ГруппаНоменклатурыРасширеннаяПодсказка" id="55"/>
 						</InputField>
-						<InputField name="Коэффициент" id="97">
-							<DataPath>Объект.Коэффициент</DataPath>
-							<SpinButton>true</SpinButton>
-							<ContextMenu name="КоэффициентКонтекстноеМеню" id="98"/>
-							<ExtendedTooltip name="КоэффициентРасширеннаяПодсказка" id="99"/>
-							<Events>
-								<Event name="Tuning">КоэффициентРегулирование</Event>
-							</Events>
-						</InputField>
+						<Button name="ЗаполнитьНоменклатуру" id="151">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗаполнитьНоменклатуру</CommandName>
+							<ExtendedTooltip name="ЗаполнитьНоменклатуруРасширеннаяПодсказка" id="152"/>
+						</Button>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -299,6 +338,9 @@
 					<EditMode>EnterOnInput</EditMode>
 					<ContextMenu name="ТоварыКЗаказуКонтекстноеМеню" id="35"/>
 					<ExtendedTooltip name="ТоварыКЗаказуРасширеннаяПодсказка" id="36"/>
+					<Events>
+						<Event name="OnChange">ТоварыКЗаказуПриИзменении</Event>
+					</Events>
 				</InputField>
 				<ColumnGroup name="ТоварыГруппа1" id="72">
 					<ExtendedTooltip name="ТоварыГруппа1РасширеннаяПодсказка" id="73"/>
@@ -461,6 +503,76 @@
 				</ColumnGroup>
 			</ChildItems>
 		</Table>
+		<UsualGroup name="ШапкаПраво" id="140">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вес заказа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вес заказа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+			<Group>AlwaysHorizontal</Group>
+			<HorizontalAlign>Right</HorizontalAlign>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="ШапкаПравоРасширеннаяПодсказка" id="141"/>
+			<ChildItems>
+				<LabelField name="ИтогВесСклад" id="142">
+					<DataPath>ИтогВесСклад</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Склад</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<TextColor>#177CA3</TextColor>
+					<Font ref="style:NormalTextFont" height="26" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ContextMenu name="ИтогВесСкладКонтекстноеМеню" id="143"/>
+					<ExtendedTooltip name="ИтогВесСкладРасширеннаяПодсказка" id="144"/>
+				</LabelField>
+				<LabelField name="ИтогВесЗаказ" id="145">
+					<DataPath>ИтогВесЗаказ</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказ</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<HorizontalStretch>false</HorizontalStretch>
+					<TextColor>#007422</TextColor>
+					<Font ref="style:NormalTextFont" height="26" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ContextMenu name="ИтогВесЗаказКонтекстноеМеню" id="146"/>
+					<ExtendedTooltip name="ИтогВесЗаказРасширеннаяПодсказка" id="147"/>
+				</LabelField>
+				<LabelField name="ИтогВес" id="148">
+					<DataPath>ИтогВес</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Всего</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<HorizontalStretch>false</HorizontalStretch>
+					<TextColor>#740000</TextColor>
+					<Font ref="style:NormalTextFont" height="26" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ContextMenu name="ИтогВесКонтекстноеМеню" id="149"/>
+					<ExtendedTooltip name="ИтогВесРасширеннаяПодсказка" id="150"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -535,6 +647,51 @@
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогВесСклад" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итог вес склад</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогВесЗаказ" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итог вес склад</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогВес" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итог вес склад</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
@@ -838,6 +995,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьЗаказ</Action>
+		</Command>
+		<Command name="ЗаполнитьНоменклатуру" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить номенклатуру</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить номенклатуру</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьНоменклатуру</Action>
 		</Command>
 	</Commands>
 </Form>
